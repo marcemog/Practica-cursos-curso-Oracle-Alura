@@ -1,0 +1,22 @@
+Sobre los métodos
+¿Qué aprendimos sobre los métodos/funciones de una clase?
+
+
+Alternativa correta
+Un método puede recibir cualquier cantidad de parámetros.
+
+
+Exacto. Un método puede estar definido sin parámetros, así como puede tener uno o más parámetros. Esa es la forma de pasarle información para que podamos reutilizar su funcionalidad en diferentes escenarios.
+
+Alternativa correta
+Función y método son sinónimos y nos ayudan a construir un vocabulario más rico dentro de nuestro sistema.
+
+
+Correcto. Usamos métodos para identificar los comportamientos que nuestra clase tiene. Eso facilita la comunicación dentro del equipo.
+
+
+Alternativa correta
+Un método define el comportamiento o la forma de realizar algo.
+
+
+Correcto. Ese es el objetivo de los métodos, definir qué acciones puede ejecutar un objeto. El comportamiento es implementado dentro del método.

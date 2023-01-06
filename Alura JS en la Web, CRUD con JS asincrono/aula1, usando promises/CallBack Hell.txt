@@ -1,0 +1,27 @@
+CallBack Hell
+
+Estamos creando un juego en el cual nuestro personaje necesita correr por varios laberintos. Para movimentarlo por el primer laberinto creamos el siguiente código:
+
+movePersonaje(‘100’, ‘Izquierda’, function() {
+    movePersonaje(‘800’, ‘Derecha’, function() {
+        movePersonaje(‘200’, ‘Izquierda’, function() {
+            movePersonaje(‘10’, ‘Derecha’, function() {
+                movePersonaje(‘60’, ‘Izquierda’, function() {
+                })
+
+            })
+
+        })
+    })
+})
+
+
+En el formato actual nuestro código crea el infierno de las funciones auxiliares (callback hell) o pirámide de la ruina (pyramid of doom), lo que acaba dificultando el entendimiento del código y también su mantenimiento en el caso de que el personaje necesite de nuevos movimientos en el escenario. ¿Cuál solución abajo entregaría el mismo resultado y resolvería los dos problemas mencionados?
+
+movePersonaje(‘100’, ‘Izquierda’)
+    .then(() => movePersonaje(‘800’, ‘Derecha’))
+    .then(() => movePersonaje(‘200’, ‘Izquierda’))
+    .then(() => movePersonaje(‘10’, ‘Derecha’ ))
+    .then(() => movePersonaje(‘60’, ‘Izquierda’ ))
+
+Utilizando promise podemos organizar nuestro código de forma estructural facilitando su lectura y mantenimiento.

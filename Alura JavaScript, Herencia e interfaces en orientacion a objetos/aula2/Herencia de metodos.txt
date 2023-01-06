@@ -1,0 +1,20 @@
+Herencia de metodos
+
+si tengo una clase padre y una clase hija que extiende de la clase padre, esta clase hija hereda los metodos definidos por el padre por defecto.
+si quiero que la clase hija extienda de la clase padre pero a la vez cambie algun metodo es tan sencillo como modificar ese metodo de acuerdo a lo que quiero hacer.
+si quiero que la clase hija extienda de la clase padre y en un metodo especifico quiero que haga lo mismo que el padre y agregue otro comportamiento debo usar el metodo super.metodopadre(); y en la linea de abajo agregar el comportamiento que deseo agregar 
+
+ejemplo
+
+en clase padre tengo el siguiente metodo
+prueba() {
+        console.log("Metodo padre");
+    }
+
+y en la clase hija que extiende del padre 
+    prueba() {
+        super.prueba();
+        console.log("Metodo hijo");
+    }
+
+en este caso la clase hija agrega comportamiento al metodo de la clase padre, si no tuviera la linea con el super.prueba() lo que estaria haciendo es sobreescribiendo el metodo y cambiando el comportamiento en esa clase hija especifica

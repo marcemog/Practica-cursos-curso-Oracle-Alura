@@ -1,0 +1,28 @@
+Métodos con el mismo nombre
+
+Pedro comenzó a probar lo que aprendió de herencia en Orientación a Objetos y escribió el siguiente código:
+
+class Empleado{
+    getBonificacion(){
+        return 100;
+    }
+}
+
+class Director extends Empleado{
+    getBonificacion(){
+        return 200;
+    }
+}
+
+class DirectorTI extends Director{
+}
+
+Al hacer su código, ejecutó el método getBonificación y recibió como respuesta 200, cuando lo esperado por él era recibir 100 como respuesta, pues el Director de TI debe recibir ese valor de bonificación. ¿Por qué retornó 200?
+
+Alternativa correta
+Eso sucede porque la clase DirectorTI no sobreescribe el método getBonificacion.
+Correcto. Si el sobreescribiera el método getBonificacion en la clase DirectorTI, retornando 100, funcionará como él espera.
+
+Alternativa correta
+Eso sucede porque la clase DirectorTI herera de la clase Director y esta última está sobreescribiendo el método getBonificacion de la clase Empleado.
+Exacto. Acá vemos una clase que hereda de otra clase que ya heredó atributos y métodos de otra clase. Es decir la herencia es posible definirla en múltiples niveles. Debemos tener cuidado pues podemos llegar a generar un árbol de herencia complejo que al final nos puede generar problemas de mantenimiento.

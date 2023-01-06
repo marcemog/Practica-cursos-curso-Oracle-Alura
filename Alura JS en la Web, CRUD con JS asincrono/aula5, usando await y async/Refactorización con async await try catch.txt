@@ -1,0 +1,31 @@
+Refactorización con async await try catch
+
+María tiene un código en su aplicación que exhibe el nombre de todas las personas registradas en el sistema de la startup en la cual trabaja.
+
+const render = () => { 
+    clienteService.listaClientes()
+        .then(data => {
+            data.forEach(elemento => {
+            tabla.appendChild(creaNuevaLinea(elemento.nombre, elemento.correo, elemento.id))
+        })
+    })
+}
+
+Ahora ella quiere agregar una nueva funcionalidad en su aplicación, pero antes de empezar con esta tarea ella percibe una chance de refactorizar el código.
+
+¿Cuál opción de refactorización con uso de async/await y try/catch?
+
+const render = async () =>  {
+    try {
+        const listaClientes = await clienteService.listaClientes()
+        listaClientes.forEach(elemento => {
+            tabla.appendChild(creaNuevaLinea(elemento.nombre,elemento.correo, elemento.id))
+        })
+    }
+    catch(error){
+        console.log(error)
+        window.location.href="../telas/error.html"
+    }
+}
+
+¡Alternativa correcta! Utilizando async/await tenemos una función asíncrona que podemos leer de forma estructural, lo que nos trae beneficios de mantenimiento y legibilidad para nuestro código. Y el uso de try/catch nos ayuda a lidiar con los errores.

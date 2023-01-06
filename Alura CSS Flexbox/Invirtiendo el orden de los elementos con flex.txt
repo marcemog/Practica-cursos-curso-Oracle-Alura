@@ -1,0 +1,31 @@
+Para saber más: Invirtiendo el orden de todos los elementos
+PRÓXIMA ACTIVIDAD
+
+Flex nos permite cambiar muchas cosas sobre los elementos, ya sea la distribución del espacio, 
+los tamaños, la dirección de renderizado y la alineación. Además de todo esto también podemos cambiar la 
+dirección en la que se renderizan nuestros elementos. Haz la prueba. Abre nuestra página principal index.html,
+ ¿recuerda del grid que hicimos? El CSS que hemos utilizado debería ser así:
+
+.contenidoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap;
+}COPIA EL CÓDIGO
+Cambia ahora el flex-wrap. Pon flex-wrap: wrap-reverse.
+
+.contenidoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}COPIA EL CÓDIGO
+¡Todo lo que estaba abajo ha subido a la parte superior! ¡Ha invertido el orden de las líneas!
+
+Inténtalo ahora:
+
+.contenidoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}COPIA EL CÓDIGO
+Observa que ahora ha invertido el orden de los elementos en las líneas.
+
+También podemos usar flex-direction: column-reverse en los casos en que usamos flex-direction: column.
+ Este código invertirá el orden!

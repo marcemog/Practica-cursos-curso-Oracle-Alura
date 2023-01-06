@@ -1,0 +1,24 @@
+Flex basis
+
+Definiendo la anchura de los elementos con flex:
+
+¿Para qué sirve la propiedad flex-basis?
+
+Alternativa correta
+La propiedad flex-basis sirve para definir un ancho para el elemento en caso de que el flex container esté con 
+flex-direction: row.
+
+flex-basis: 500px;
+
+¡Alternativa correcta!
+
+Alternativa correta
+La propiedad flex-basis sirve para definir un ancho para el elemento en caso de que el flex container esté con
+ flex-direction: column.
+
+flex-basis: 500px;
+
+¡Alternativa correcta! La propiedad flex-basis sirve para definir una anchura o altura para el flex item. Se 
+el flex container tiene flex-direction: column,
+ el flex-basis en el flex item servirá para definir una height. En este caso el flex-direction: row funciona 
+como un width.

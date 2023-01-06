@@ -1,0 +1,55 @@
+flex grow 
+
+Digamos que tenemos dos flex ítems y necesitamos que uno de esos elementos llene todo el espacio que queda 
+del flex container1. ¿Cómo podemos hacerlo?
+
+Alternativa correta
+Podemos utilizar la propiedad flex-grow. El código sería así:
+
+.flex-item {
+  flex-grow: 1;
+}
+
+¡Alternativa correcta! Para decirle a un elemento / flex item que crezca y ocupe todo el espacio que queda
+ dentro del flex container debemos utilizar la propiedad flex-grow.
+
+Podemos poner el valor 1 para que este elemento ocupe todo el espacio.
+
+
+
+
+La propiedad flex-grow vista en el ejercicio anterior ayuda mucho si queremos que un elemento ocupe todo el ancho 
+restante del flex container.
+
+Por ejemplo, si tenemos:
+
+Elemento 1: 200 px.
+
+Elemento 2: 200 px.
+
+Espacio vacío que restó del flex container: 600 px.
+
+Total: 1000 px.
+
+Se ponemos flex-grow: 1 en el primer elemento, este pasa a tener 800 px de ancho, es decir:
+
+Espacio vacío + Elemento 1: 800 px.
+
+Y el segundo elemento sigue teniendo 200 px de ancho.
+
+Ahora, si ponemos flex-grow: 1 en ambos elementos, ¿Qué pasaría? ¿Cuál seria el tamaño del elemento 1? Y 
+el elemento 2?
+
+Lo que ocurriría es lo siguiente:
+
+Considere el espacio vacío inicial: 600 px.
+
+Como ambos elementos tienen flex-grow: 1, la suma de flex-grow que tenemos dará 1 + 1 = 2.
+
+El navegador toma este espacio vacío y lo divide por el número de flex-grow que tenemos: 600 px : 2 = 300 px.
+
+Ahora distribuye ese espacio a cada uno de los elementos que hemos colocado flex-grow.
+
+Elemento 1: 300 px + 200 px = 500 px.
+
+Elemento 2: 300 px + 200 px = 500 px.

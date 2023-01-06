@@ -1,0 +1,84 @@
+flex shrink 
+
+Imaginemos que en nuestra página web tenemos un video de YouTube, imaginemos que aunque el usuario reduzca
+ la pantalla, nuestro vídeo no debe disminuir de tamaño. ¿Cómo podemos hacerlo?
+
+Imaginemos que nuestro vídeo es un flex item y que el código HTML es el siguiente:
+
+<section class="videoSobre">
+<div class="container">
+    <iframe class="videoSobre-video" width="560" height="315" src="https://www.youtube.com/embed/bIl"></iframe>
+
+    <div class="videoSobre-sobre">
+      <h2 class="videoSobre-sobre-title"> Ventajas de Alurinha</h2>
+      <ul class="videoSobre-sobre-list">
+        <li class="videoSobre-sobre-item"> Estudia donde quieras</li>
+        <li class="videoSobre-sobre-item"> Nuevos cursos cada mes</li>
+        <li class="videoSobre-sobre-item"> Cursos compatibles con el mercado</li>
+      </ul>
+      <button class="videoSobre-button"> Inscríbete ahora</button>
+    </div>
+  </div>
+</section>
+
+Podemos simplemente poner la propiedad flex-shrink en el elemento, por ejemplo:
+
+.videoSobre-video {
+  flex-shrink: 0
+}
+
+¡Alternativa correcta! ¡Es perfecto! Simplemente ponemos flex-shrink: 0 en el elemento que no queremos que
+ se reduzca.
+
+Para ello podemos poner la propiedad flex-direction: column, que hace que los elementos queden uno debajo
+ del otro. Este es
+ el aspecto más importante de la capacidad de respuesta de flexbox.
+
+Considere el código HTML siguiente.
+
+<main class="flexContainer">        
+  <div class="flexItem firstRow"></div>
+  <div class="flexItem firstRow"></div>
+  <div class="flexItem firstRow"></div>
+  <div class="flexItem firstRow"></div>
+</main>COPIA EL CÓDIGO
+Ahora considere que estamos en un contexto flex. Y que cada flexItem tiene 200 px de width.
+
+CSS
+
+.flexContainer {
+  display: flex;
+}
+.flexItem {
+  width: 200px;
+}COPIA EL CÓDIGO
+1) Cuando el ancho de la pantalla llega a 800 px, los elementos mantienen 200 px de ancho cada uno
+ llenando todo el espacio de la pantalla, sin embargo, qué pasa con el ancho de los flexItem cuando disminuimos 
+la pantalla a por ejemplo 600 px.
+
+2) ¿Qué ocurre también con su ancho cuando aplicamos el siguiente CSS a nuestro código?
+
+.flexItem:first-child {
+  flex-shrink: 2;
+}COPIA EL CÓDIGO
+Sugerencia: Crea un archivo HTML y CSS, escriba este código y haga las pruebas, ¡también use diferentes valores!
+
+VER OPINIÓN DEL INSTRUCTOR
+Opinión del instructor
+
+1) Cuando disminuimos la pantalla a 600 px los flex-item disminuyen su tamaño por igual entre ellos, es decir,
+ como la pantalla disminuyó 200 px y tenemos 4 flex items, cada uno disminuyó 50 px. Así que cada flex-item quedó 
+con 150 px al final.
+
+2) Cuando ponemos flex-shrink: 2 en el primero, este se reduce de forma diferente a los demás elementos. Las
+ cuentas que se producen son similares a las que se dan en el flex-grow.
+
+En primer lugar el navegador toma el total de flex-shrink que nuestros flex items tiene, ya que tenemos por 
+defecto flex-shrink: 1 en los flex items, la cuenta se ve así:
+
+2 + 1 + 1 + 1 = 5`. Eso es porque a el primer le ponemos `flex-shrink:2COPIA EL CÓDIGO
+Como hemos disminuido 200 px del tamaño total, el navegador toma este valor y lo divide por el total de 
+flex-shrink. Queda: 200 px : 5 = 40 px.
+
+De esta manera el navegador toma 2 partes del primer elemento 200px - 80px = 120px y toma 1 parte de los 
+otros, es decir: 200 px - 40 px = 160 px.

@@ -1,0 +1,13 @@
+css avanzado
+
+main > p { aplica estilo a los parrafos que son hijos directos de main
+}
+
+img + p { aplica estilo al primer parrafo que sigue inmediatamente a la img
+} 
+
+img ~ p { aplica estilos a todos los parrafos que siguen a la img
+}
+
+.principal p: not(#mision) { aplica estilos a todos los parrafos que estan en principal menos al de id=mision
+}

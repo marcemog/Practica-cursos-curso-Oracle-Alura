@@ -1,0 +1,42 @@
+<meta charset="UTF-8" />
+
+<h1>Sorteo loteria</h1>
+
+<script>
+
+function saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write("<big>"+ frase + "</big>");
+        saltarlinea();
+    }
+var n= parseInt(prompt("Ingrese un numero: "));
+
+    function sortea(n){
+        return Math.round(Math.random()*n);
+    }
+
+var numeroPensado = sortea(n);
+var numeroLanzado= parseInt(prompt("Ingrese un numero entre 1 y "+ n));
+
+if (numeroPensado == numeroLanzado){
+    imprimir("Usted acerto");
+}
+
+else {
+    if (numeroPensado < numeroLanzado){
+        imprimir("Usted erro, el numero era menor que "+numeroLanzado);
+    }
+   else {
+    imprimir("Usted erro, el numero era mayor que "+numeroLanzado);
+   } 
+}
+
+</script>

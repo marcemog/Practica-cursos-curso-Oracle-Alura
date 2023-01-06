@@ -1,0 +1,13 @@
+Encapsulando con getters y setters
+
+Con relación a los asistentes get y set. ¿Cuales de los enunciados son ciertos?
+
+Alternativa correta
+Utilizando el asistente set podemos cambiar la regla de cómo un atributo puede o no puede modificarse sin tener que cambiarlo en diferentes puntos del código.
+
+Correcto. Esa es la idea, así que si cambia alguna regla de asignación, sólo necesitamos modificar un lugar. Recordando que de esta forma conseguimos realizar protecciones a los atributos de forma fácil.
+
+Alternativa correta
+El uso del asistente set es una buena práctica para garantizar que la asignación de valores a los atributos sea siempre segura.
+
+Exacto. Es lo que conversábamos sobre la protección de los atributos de nuestras clases de encapsulación. Siempre debemos mantener tanta encapsulación como sea posible.

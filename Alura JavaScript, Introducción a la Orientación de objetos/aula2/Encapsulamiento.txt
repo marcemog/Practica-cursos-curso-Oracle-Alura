@@ -1,0 +1,16 @@
+Encapsulamiento
+
+Creamos métodos para proteger atributos e informaciones sensibles de nuestras clases. Sin embargo, si no hacemos nada, esta información aún queda expuesta y se puede cambiar manualmente.
+
+Relacionado a la protección de atributos, seleccione las alternativas correctas:
+
+Alternativa correta
+Por defecto en Javascript usamos el prefijo “_” para indicar que es un atributo privado y que no debe ser alterado manualmente.
+
+Exacto. A pesar de que no existe una limitación de sintaxis para cambiar la propiedad, si se realizan alteraciones manuales sobre atributos con ese prefijo se considera una mala práctica pues se estaría rompiendo el encapsulamiento de la clase.
+
+
+Alternativa correta
+Actualmente en Javascript ningún atributo o método es realmente privado.
+
+Correcto. Javascript es un lenguaje de alcance abierto y por eso es posible visualizar cualquier atributo o propiedad de nuestra clase.

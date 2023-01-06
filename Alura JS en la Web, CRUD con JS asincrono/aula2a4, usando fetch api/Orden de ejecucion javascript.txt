@@ -1,0 +1,19 @@
+¿Cuál es el orden de ejecución?
+
+
+Después de estudiar sobre JavaScript runtime, María decidió hacer algunos ejercicios para fijar su aprendizaje. Ella encontró el siguiente código:
+
+console.log('1');
+setTimeout(() => console.log('2'), 1000);
+console.log('3')
+¿Qué nos regresa el código arriba?
+
+1
+
+3
+
+2
+
+Exacto. setTimeOut() es una instrucción de WebApi, por eso es mandado para la callback queue y es ejecutado después de los dos console.log, que son ejecutados primero ya que son comandos nativos de lenguaje.
+
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D

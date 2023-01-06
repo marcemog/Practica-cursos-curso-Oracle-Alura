@@ -1,0 +1,11 @@
+Reflexionando sobre las clases abstractas
+
+En esta clase aprendimos el concepto de clases abstractas y métodos abstractos. Seleccione las opciones verdaderas sobre este tema:
+
+Los métodos abstractos deben ser sobreescritos por las clases hijas.
+Exacto. De esta forma es importante tener claro que no se deben tener métodos abstractos fuera de una clase abstracta.
+
+Las clases abstractas son diseñadas de forma tal que sólo sean extensibles o heredables por otras clases.
+Exactamente, ellas nos ayudan a crear el esqueleto de funcionamiento de clases que comparten el funcionamiento, de forma que el código sea reutilizable lo más posible.
+
+https://ljcl79.medium.com/las-clases-abstractas-qu%C3%A9-son-y-para-qu%C3%A9-sirven-8328b92db680

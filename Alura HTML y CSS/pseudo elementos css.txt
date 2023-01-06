@@ -1,0 +1,17 @@
+pseudo elementos
+
+como aplicar estilos solo a la primer letra de un titulo o parrafo
+
+.titulo-principal: first-letter{
+}
+
+p:first-line{ da efecto solo a la primer linea de todos los parrafo
+}
+
+.titulo-principal:before { por ej abre corchetes antes del titulo
+content: "["
+}
+
+.titulo-principal:after {  por ej cierra corchetes dsps del titulo
+content: "]"
+}

@@ -1,0 +1,84 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = "green" //propiedad
+    pincel.fillRect(50,0,50,50); //funcion
+
+    pincel.fillStyle =  "red" //propiedad
+    pincel.fillRect(0,0,50,50); //funcion
+
+    pincel.fillStyle = "blue" //propiedad
+    pincel.fillRect(100,0,50,50); //funcion
+
+    var puedoDibujar = false;
+
+    var colores = ["green", "red", "blue"];
+    var color = colores[2];
+
+    function cambiarColor(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+         // para optimizar podria hcaer solo un if para las condiciones de y que son todas iguales
+        if ((0<x) && (x<50) && (0< y) && (y< 50)){
+            color = colores[1];
+        } else if ((50<x) && (x<100) && (0< y) &&  (y< 50)){
+            color = colores[0];
+        } else if ((100<x) && (x<150) && (0 < y) && (y <50)) { 
+            color = colores[2];
+        }
+    }
+
+   
+
+    function dibujarCirculo(x,y) {
+
+        if(puedoDibujar) {
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+    }
+
+    pantalla.onmousemove = dibujarCirculo();
+
+    function habilitarDibujar() {
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+            puedoDibujar = false; 
+    }
+
+    function areaRestringida(x,y) {
+        if  (( -5 < x) && (x<155) && (-5< y) &&  (y< 55)) {
+            return false;
+    } else {
+        return true;
+    }
+    }
+
+    function capturarMovimientoMouse(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if (areaRestringida(x,y)) {
+            dibujarCirculo(x,y);
+        }
+    }
+
+    pantalla.onmousemove = capturarMovimientoMouse;
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+    pantalla.onclick = cambiarColor;
+
+
+</script>

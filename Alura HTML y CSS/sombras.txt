@@ -1,0 +1,7 @@
+sombra hacia dentro
+
+box-shadow: inset ( parametros )
+
+text-shadow : parametros
+
+box-shadow generator css google pagina developer mozilla

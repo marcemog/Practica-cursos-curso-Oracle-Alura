@@ -1,0 +1,14 @@
+flex condensa todo
+
+Definiendo el ancho de los elementos con flex:
+
+¿Cuál es la propiedad que utilizamos para condensar las propiedades: flex-grow, flex-shrink e flex-basis?
+
+Alternativa correta
+La propiedad es la propiedad flex.
+
+ flex: 1 1 300px;
+El orden de los valores es: flex-grow, flex-shrink, flex-basis.
+
+
+¡Alternativa correcta! Podemos usar la propiedad flex. El orden de los valores es: flex-grow, flex-shrink, flex-basis.

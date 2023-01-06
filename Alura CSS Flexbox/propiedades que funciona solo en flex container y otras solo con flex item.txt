@@ -1,0 +1,23 @@
+¿Qué propiedades funcionan SOLAMENTE en los flex container y cuales son las que funcionan en los flex ítems?
+
+Hay varios sitios para consultar esto, como este. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+¡Alternativa correcta!
+flex container:
+justify-content, align-items, flex-direction, flex-wrap
+flex items:
+order, flex-grow, flex-shrink
+La propiedad display: flex puede ser usada en los dos. En caso de que sea usada un flex ítem este elemento
+ será tanto un flex ítem cuanto un flex container.
+
+flex container:
+justify-content, align-items, display: flex,
+flex items:
+order, flex-grow, flex-shrink
+
+¡Alternativa correcta! Lo mejor es tener en cuenta que lo ideal es, siempre que sea necesario, consultar la
+ documentación a través de este sitio. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Ahí podemos ver claramente qué propiedades se aplican al container y a los flex ítems, no hay que
+ estar memorizando, esto vendrá naturalmente con la práctica.
+

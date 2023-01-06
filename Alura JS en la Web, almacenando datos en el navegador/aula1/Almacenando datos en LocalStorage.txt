@@ -1,0 +1,14 @@
+Almacenando datos en LocalStorage
+
+Creamos un objeto que contiene llave y valor, y que servirá para almacenar una serie de datos en el LocalStorage.
+
+const datos = {
+   nombre,
+   fecha,
+   edad
+}
+
+Los datos de este objeto no están en el formato aceptable para el almacenamiento. Como ya sabemos, LocalStorage solamente acepta guardar informaciones en el formato de strings. ¿Cómo podemos convertir los valores de un objeto para string?
+
+localStorage.setItem('tasks', JSON.stringify (datos))
+¡Exacto! La manera correcta de transformar los datos en string es a través de JSON.stringify y aprovechamos para utilizar el setItem para almacenar los datos localmente.

@@ -1,0 +1,4 @@
+opacidad a colores
+
+rgba(0,0,0,0.4) el a es de la opacidad, en este caso es un color negro dado 
+por los 3 primeros ceros con un 40% de opacidad

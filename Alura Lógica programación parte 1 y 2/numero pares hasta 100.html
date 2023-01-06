@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+
+<h1>Numeros pares hasta 100</h1>
+
+<script>
+
+function saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write("<big>"+ frase + "</big>");
+        saltarlinea();
+    }
+
+    var n = 2;
+
+
+    while (n <= 100){  
+            imprimir(n)
+            n= n+2;
+        }
+        
+
+    imprimir("Fin");
+
+</script>

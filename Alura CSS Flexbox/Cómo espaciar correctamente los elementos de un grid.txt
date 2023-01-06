@@ -1,0 +1,47 @@
+Cómo espaciar correctamente los elementos de un grid
+PRÓXIMA ACTIVIDAD
+
+Para espaciar correctamente los elementos de un grid tenemos que hacer algunos cálculos con el viejo y buen margin y width.
+
+Si tenemos 3 elementos por línea podemos hacer algo así:
+
+HTML:
+
+<div class="grid">
+  <!-- primera línea -->
+  <div class="course"></div>
+  <div class="course"></div>
+  <div class="course"></div>
+  <!-- segunda línea -->
+  <div class="course"></div>
+  <div class="course"></div>
+  <div class="course"></div>
+  <!-- tercera línea -->
+  <div class="course"></div>
+  <div class="course"></div>
+  <div class="course"></div>
+  <!-- cuarta línea -->
+  <div class="course"></div>
+  <div class="course"></div>
+</div>COPIA EL CÓDIGO
+CSS:
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.course {
+  width: 31.3%;
+  margin: 1%;
+}
+
+VER OPINIÓN DEL INSTRUCTOR
+Opinión del instructor
+
+En este caso tendríamos 3 .course por línea, cada uno con width: 31.3% y margin: 1%.
+
+De width eso totaliza: 31.3 * 3 = 93.9%.
+
+De margin eso totaliza: 6% (1% a la izquierda y 1% a la derecha de cada elemento).
+
+En el total tenemos: 93.9% + 6% = 99.9% que se puede redondear al 100%.

@@ -1,0 +1,8 @@
+calculo con css
+
+ej 
+.utensilios {
+width: calc( 40% + 50px *2)
+}
+
+la funcion calc se puede usar para calcular valores de por ejemplo dimensiones de pantalla 

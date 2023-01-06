@@ -1,0 +1,18 @@
+
+@media screen and (min-width: 0){
+    .receta__imagen {
+        height: 300px;
+    } 
+}
+
+@media screen and (min-width: 768px){
+    .receta__imagen {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 922px){
+    .receta__imagen {
+        height: 200px;
+    }
+}
